@@ -1,28 +1,35 @@
 .navbar {
-    width: 100%;
-    padding: var(--pd1);
-    display: flex;
-    align-items: center;
-    gap: var(--gap1);
-    color: #fff;
+  width: 100%;
+  padding: var(--pd1);
+  display: flex;
+  align-items: center;
+  gap: var(--gap1);
+  color: #fff;
+  transition: all 0.1s ease-in-out;
 }
 
-.navbar>:first-child {
-    font-size: var(--fs5);
-    flex: 1;
+.navbar_bg {
+  background: #333333d2;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
 }
 
-.navbar>a {
-    font-size: var(--fs6);
-    color: #fff;
-    transition: all 0.3s ease-in-out;
+.navbar > :first-child {
+  font-size: var(--fs5);
+  flex: 1;
 }
 
-.navbar>a:hover {
-    color: #ee7f00;
+.navbar > a {
+  font-size: var(--fs6);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar > a:hover {
+  color: #ee7f00;
 }
 
 .navbar .active {
-    border-bottom: 2px solid #ee7f00;
-    color: #ee7f00;
+  border-bottom: 2px solid #ee7f00;
+  color: #ee7f00;
 }

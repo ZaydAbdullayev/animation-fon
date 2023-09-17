@@ -1,6 +1,5 @@
 import React from "react";
 import "./home.css";
-import { TextV } from "../../components/text/text";
 
 export const Home = () => {
   return (
@@ -13,7 +12,7 @@ export const Home = () => {
           <span>I'm FullStack Developer</span>
         </h1>
       </div>
-      <TextV />
+      <figure></figure>
     </div>
   );
 };

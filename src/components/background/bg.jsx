@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./bg.css";
 import * as THREE from "three";
 
@@ -75,9 +75,9 @@ export const RainBg = () => {
 
     // Create a camera
     const camera = new THREE.PerspectiveCamera(
-      70,
+      50,
       window.innerWidth / window.innerHeight,
-      0.6,
+      1,
       2000
     );
     camera.position.z = 3;
@@ -85,14 +85,15 @@ export const RainBg = () => {
     // Create a renderer
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor("#222");
     document.body.appendChild(renderer.domElement);
 
     // Create raindrops
     const raindrops = [];
     const raindropGeometry = new THREE.BoxGeometry(0.005, 0.1, 0.005);
     const raindropMaterial = new THREE.MeshBasicMaterial({
-      background: "#55cfff",
-      blendSrcAlpha: "#333",
+      color: "#eee3",
+      opacity: 0.5,
     });
 
     for (let i = 0; i < 1000; i++) {
