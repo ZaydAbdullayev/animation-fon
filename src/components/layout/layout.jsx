@@ -2,7 +2,7 @@ import React from "react";
 import "./layout.css";
 import { Navbar } from "../navbar/navbar";
 import { Outlet } from "react-router-dom";
-import { BG } from "../background/bg";
+import { BG, RainBg } from "../background/bg";
 
 export const Layout = () => {
   return (
@@ -13,7 +13,7 @@ export const Layout = () => {
       <section>
         <Outlet />
       </section>
-      <BG/>
+      <BG />
     </main>
   );
 };
