@@ -15,7 +15,8 @@
 }
 
 .navbar > :first-child {
-  font-size: var(--fs5);
+  text-align: start;
+  font-size: var(--fs4);
   flex: 1;
 }
 
@@ -26,10 +27,10 @@
 }
 
 .navbar > a:hover {
-  color: #ee7f00;
+  color: #ee964b;
 }
 
 .navbar .active {
-  border-bottom: 2px solid #ee7f00;
-  color: #ee7f00;
+  border-bottom: 2px solid #ee964b;
+  color: #ee964b;
 }

@@ -1,22 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./text.css"; // Projeye özgü CSS dosyasını ekleyin
-import { textAnimations } from "./style";
 
 export const TextV = () => {
-  const [texton, setTexton] = useState(true);
-
-  useEffect(() => {
-    if (texton) {
-      textAnimations.forEach((animation, index) => {
-        const textElement = document.querySelector(
-          `#ui .fly-animation:nth-child(${index + 1})`
-        );
-        if (textElement) {
-          Object.assign(textElement.style, animation);
-        }
-      });
-    }
-  }, [texton]);
+  const [texton, setTexton] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,15 +10,26 @@ export const TextV = () => {
     }, 10000);
   }, []);
 
+  const generateRandomColor = () => {
+    const r = Math.floor(Math.random() * 200) + 55;
+    const g = Math.floor(Math.random() * 200) + 55;
+    const b = Math.floor(Math.random() * 200) + 55;
+    return `rgba(${r}, ${g}, ${b}, 1)`;
+  };
+
   const fakeArray = Array.from({ length: 60 });
 
   return (
     <div className="welcome" style={texton ? {} : { display: "none" }}>
       {/* Please typing your favorite word! */}
       <div id="ui">
-        {fakeArray.map((item, index) => {
+        {fakeArray.map((item) => {
           return (
-            <div className="fly-animation" key={index}>
+            <div
+              className="text"
+              key={item}
+              style={{ color: generateRandomColor() }}
+            >
               Welcome to my Portfolio
             </div>
           );

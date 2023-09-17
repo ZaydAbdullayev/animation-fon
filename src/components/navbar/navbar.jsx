@@ -26,7 +26,9 @@ export const Navbar = () => {
 
   return (
     <nav className={navBg ? "navbar navbar_bg" : "navbar"}>
-      <h1>Logo</h1>
+      <h1 className="text_3d">
+        <span>Logo</span>
+      </h1>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/about">About me</NavLink>
       <NavLink to="/project">Project</NavLink>
