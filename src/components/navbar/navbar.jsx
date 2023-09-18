@@ -7,18 +7,13 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Sayfa yukarı kaydırıldığında navbar'ın pozisyonunu kontrol edin
       if (window.scrollY === 0) {
-        setNavBg(false); // Navbar en üstteyse arka planı şeffaf yapın
+        setNavBg(false);
       } else {
-        setNavBg(true); // Navbar kaydırıldığında arka planı beyaz yapın (örneğin)
+        setNavBg(true);
       }
     };
-
-    // Sayfa kaydırıldığında handleScroll işlevini çağırın
     window.addEventListener("scroll", handleScroll);
-
-    // Komponent sona erdiğinde olay dinleyicisini kaldırın
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

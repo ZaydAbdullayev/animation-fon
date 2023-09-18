@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./text.css"; // Projeye özgü CSS dosyasını ekleyin
 
 export const TextV = () => {
-  const [texton, setTexton] = useState(false);
+  const [texton, setTexton] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
