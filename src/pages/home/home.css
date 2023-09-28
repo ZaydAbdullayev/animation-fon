@@ -20,7 +20,7 @@
   font-size: calc(26px + (40 - 26) * (100vw - 320px) / (1440 - 320));
   text-align: center;
   font-weight: bold;
-  color: #3d3d3d;
+  color: #555;
 }
 
 .text_3d {
@@ -28,7 +28,7 @@
 }
 
 .text_3d span {
-  text-shadow: 0 -1px 0 #858585, 0 1px 10px rgba(0, 0, 0, 0.6),
+  text-shadow: 0 -1px 1px #eee, 0 1px 10px rgba(0, 0, 0, 0.6),
     0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.2),
     0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
     0 7px 10px rgba(0, 0, 0, 0.25), 0 15px 10px rgba(0, 0, 0, 0.2),
@@ -50,7 +50,6 @@
 }
 
 .skills > figure {
-  padding: 2%;
   background: #333;
   transition: all 0.2s ease-in-out;
   border: 1px solid transparent;
@@ -60,25 +59,29 @@
   border: 1px solid #ccc4;
 }
 
-.skills > figure > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.skills .skills_item:nth-child(4) > img {
+  padding: 5%;
   border-radius: 25px;
 }
 
-.skills .skills_item:nth-child(4) > img {
-  padding: 5%;
-}
-
 .skills_item {
+  padding: 2%;
   width: calc(100% / 5 - var(--gap2) + 5px);
   aspect-ratio: 1/1;
 }
 
 .projects_item {
+  position: relative;
+  padding: 0.4%;
   width: calc(100% / 3 - var(--gap2) + 10px);
-  aspect-ratio: 6/4;
+  aspect-ratio: 7/4;
+  overflow: hidden;
+}
+
+.skills img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .skills > button {
@@ -93,8 +96,52 @@
   transition: all 0.2s ease-in-out;
 }
 
-.skills > button > svg {
+.arrow {
   animation: arrow 1s ease infinite;
+}
+
+.projects_item__info {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  background: #0009;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: var(--fs8);
+  transition: all 0.3s ease-in-out;
+}
+
+.projects_item__info > p {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  color: #eee;
+}
+
+.projects_item__info > p > :first-child {
+  font-size: var(--fs6);
+  color: #fff;
+}
+
+.projects_item__info > a {
+  padding: 2% 7%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid transparent;
+  background: #111;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.projects_item:hover .projects_item__info {
+  left: 0;
 }
 
 @keyframes arrow {

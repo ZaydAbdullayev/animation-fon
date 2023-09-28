@@ -1,19 +1,7 @@
 import React from "react";
 import "./home.css";
 import { BiArrowToRight } from "react-icons/bi";
-
-const icons = {
-  react: require("../../components/assets/react.png"),
-  html: require("../../components/assets/html.png"),
-  css: require("../../components/assets/css.png"),
-  node: require("../../components/assets/1_bc9pmTiyKR0WNPka2w3e0Q.png"),
-  js: require("../../components/assets/JavaScript-logo.png"),
-  mongo: require("../../components/assets/Mongodb-PNG-Image-HD.png"),
-  express: require("../../components/assets/express-5-logo-png-transparent.png"),
-  socket: require("../../components/assets/socket-logo-png-transparent.png"),
-  materialui: require("../../components/assets/material-ui-logo-5BDCB9BA8F-seeklogo.com.png"),
-  reactn: require("../../components/assets/react-native.png"),
-};
+import { icons, images } from "./imgs";
 
 export const Home = () => {
   return (
@@ -46,19 +34,33 @@ export const Home = () => {
           <img src={icons.node} alt="icons" />
         </figure>
         <button>
-          See More <BiArrowToRight />
+          See More <BiArrowToRight className="arrow" />
         </button>
       </div>
       <div className="skills projects">
         <h1 className="text_3d">
           <span>My Projects</span>
         </h1>
-        <figure className="projects_item"></figure>
-        <figure className="projects_item"></figure>
-        <figure className="projects_item"></figure>
-        <figure className="projects_item"></figure>
-        <figure className="projects_item"></figure>
-        <figure className="projects_item"></figure>
+        {images.map((project) => {
+          return (
+            <figure className="projects_item">
+              <img src={project.img} alt="icons" />
+              <figcaption className="projects_item__info">
+                <p>
+                  <span>{project.name}</span>
+                  <span>{project.describe}</span>
+                </p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  See web - site <BiArrowToRight className="arrow" />
+                </a>
+              </figcaption>
+            </figure>
+          );
+        })}
       </div>
     </div>
   );
