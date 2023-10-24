@@ -1,24 +1,3 @@
-export const icons = {
-  react: require("../../components/assets/react.png"),
-  html: require("../../components/assets/html.png"),
-  css: require("../../components/assets/css.png"),
-  node: require("../../components/assets/1_bc9pmTiyKR0WNPka2w3e0Q.png"),
-  js: require("../../components/assets/JavaScript-logo.png"),
-  mongo: require("../../components/assets/Mongodb-PNG-Image-HD.png"),
-  express: require("../../components/assets/express-5-logo-png-transparent.png"),
-  socket: require("../../components/assets/socket-logo-png-transparent.png"),
-  materialui: require("../../components/assets/material-ui-logo-5BDCB9BA8F-seeklogo.com.png"),
-  reactn: require("../../components/assets/react-native.png"),
-};
-
-// export const images = {
-//   edu: require("../../components/assets/education.png"),
-//   travel: require("../../components/assets/tarvel_agency.png"),
-//   honey: require("../../components/assets/honey.png"),
-//   wishbone: require("../../components/assets/wishbone.png"),
-//   ojjo: require("../../components/assets/ojjo.png"),
-// };
-
 export const images = [
   {
     id: 1,

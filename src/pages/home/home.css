@@ -45,12 +45,17 @@
   background: #3333;
 }
 
+.c3d {
+  flex-direction: column;
+  align-items: center;
+}
+
 .skills > h1 {
   inline-size: 100%;
 }
 
-.skills > figure {
-  background: #333;
+.skills figure {
+  background: #444;
   transition: all 0.2s ease-in-out;
   border: 1px solid transparent;
 }
@@ -66,8 +71,21 @@
 
 .skills_item {
   padding: 2%;
-  width: calc(100% / 5 - var(--gap2) + 5px);
+  width: calc(100% / 2 - var(--gap2) + 5px);
   aspect-ratio: 1/1;
+}
+.carusel_container {
+  position: relative;
+  width: 320px;
+  height: 280px;
+  perspective: 1000px;
+}
+
+.carusel_3d {
+  position: relative;
+  width: 100%;
+  position: relative;
+  perspective: 1000px;
 }
 
 .projects_item {

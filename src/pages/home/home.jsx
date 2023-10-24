@@ -1,7 +1,8 @@
 import React from "react";
 import "./home.css";
 import { BiArrowToRight } from "react-icons/bi";
-import { icons, images } from "./imgs";
+import { images } from "./imgs";
+import { Corusel } from "../../components/corusel/corusel";
 
 export const Home = () => {
   return (
@@ -14,27 +15,17 @@ export const Home = () => {
           <span>I'm FullStack Developer</span>
         </h1>
       </div>
-      <div className="skills">
+      <div className="skills c3d">
         <h1 className="text_3d">
           <span>Skills</span>
         </h1>
-        <figure className="skills_item">
-          <img src={icons.html} alt="icons" />
-        </figure>
-        <figure className="skills_item">
-          <img src={icons.css} alt="icons" />
-        </figure>
-        <figure className="skills_item">
-          <img src={icons.js} alt="icons" />
-        </figure>
-        <figure className="skills_item">
-          <img src={icons.react} alt="icons" />
-        </figure>
-        <figure className="skills_item">
-          <img src={icons.node} alt="icons" />
-        </figure>
+        <div className="carusel_container">
+          <div className="carusel_3d">
+            <Corusel />
+          </div>
+        </div>
         <button>
-          See More <BiArrowToRight className="arrow" />
+          Learn More <BiArrowToRight className="arrow" />
         </button>
       </div>
       <div className="skills projects">
@@ -43,7 +34,7 @@ export const Home = () => {
         </h1>
         {images.map((project) => {
           return (
-            <figure className="projects_item">
+            <figure className="projects_item" key={project.id}>
               <img src={project.img} alt="icons" />
               <figcaption className="projects_item__info">
                 <p>
